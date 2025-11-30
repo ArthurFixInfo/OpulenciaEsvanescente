@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Rubik&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    /* font-family: Arial, Helvetica, sans-serif; */
+    /* font-family: "Playfair Display", serif; */
+    font-family: 'Rubik', sans-serif;
+}
+
+nav ul {
+    /* width: 100vw; */
+    position: fixed;
+    display: flex;
+    list-style: none;
+    background-color: #002A24;
+    padding: 0;
+    align-items: center;
+    z-index: 999;
+    border-bottom: 5px ridge black;
+    justify-content: space-evenly;
+}
+
+.menu-desktop ul{
+    width: 100vw;
+}
+
+nav ul li {
+    margin: 0 8px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a {
+    font-weight: bolder;
+    text-decoration: none;
+    color:white;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    position: relative;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background-color: green;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+nav ul li a:hover {
+    color: rgb(50, 104, 33);
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#logo {
+    align-self: center;
+    justify-self: center;
+    height: 50px; /* mesma altura aproximada dos textos (ajuste se quiser) */
+    width: auto;  /* mantém a proporção */
+    transition: 1s;
+    transform: translateY(-0px) scale(1.5);
+}
+
+#banner-inicial {
+    background-image: url(imagens/ValeBanner.png);
+    height: 91dvh;
+    width: 100%;
+    background-size: cover;
+    /* background-position: 0 -20vh; */
+    transition: 1s;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#banner-secundario {
+    background-color: antiquewhite;
+    background-image: url(imagens/VetorFundo.avif);
+    height: 50dvh;
+    width: 100%;
+    background-size: cover;
+    /* background-position: 0 -20vh; */
+    transition: 1s;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#Guerra-Civil-Americana {
+    background-color: antiquewhite;
+    background-image: url(imagens/Confederados.png);
+    height: 100dvh;
+    width: 100%;
+    background-size: contain;
+    background-position: 50%;
+    transition: 1s;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 3.5em;
+    transition: 1s;
+    margin-bottom: 1em;
+
+    color: #111111;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    text-align: center;
+}
+
+h1:hover {
+    background: rgba(0, 0, 0, 0.35);
+    padding: 10px 20px;
+    border-radius: 6px;
+    color: #ffffff
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.7em;
+    color: #111111;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+h3 {
+    text-align: center;
+    font-size: 1.7em;
+    color: #111111;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+    /* padding: 0 15%; */
+    transition: 1s;
+    max-width: 71ch;
+    max-height: 50vh;
+    /* margin: 0 0.9ch; */
+}
+
+/* --- MENU DESKTOP (mantive seu estilo atual) --- */
+/* .menu-desktop ul {
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    list-style: none;
+    background-color: #002A24;
+    padding: 0;
+    align-items: center;
+    z-index: 999;
+    border-bottom: 5px ridge black;
+    justify-content: space-evenly;
+} */
+
+/* --- BOTÃO HAMBÚRGUER --- */
+.botao-hamburger {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 2.4rem;
+    color: white;
+    background: none;
+    border: none;
+    display: none;        /* só aparece no mobile */
+    cursor: pointer;
+    z-index: 1001;
+    transition: all 1s ease;
+}
+
+/* --- MENU MOBILE --- */
+.menu-mobile {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: #002A24;
+    z-index: 1000;
+    transition: right 0.3s ease;
+    padding-top: 4rem;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.menu-mobile ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 1.2rem 2rem;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #014036;
+}
+
+
+
+/* Botão fechar */
+.botao-fechar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 3rem;
+    color: #1bde5c;
+    cursor: pointer;
+    transition: 1s;
+}
+
+
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 820px) {
+    .menu-desktop ul li:not(:has(#logo)) {
+        display: none;
+    }
+
+    .menu-desktop ul {
+        height: 95px;
+    }
+
+    .menu-desktop ul li:has(#logo) {
+        transform: translateX(-33vw);
+    }
+
+    .botao-hamburger {
+        display: block;
+    }
+}
+
+/* Mostrar menu quando marcado */
+#check-de-menu:checked ~ .menu-mobile {
+    right: 0%;
+}
+
+#check-de-menu:checked ~ .botao-hamburger {
+    display: none;
+}
+
+
+
+/* .cortando {
+    font-style: oblique;
+    position: relative;
+    display: inline-block;
+}
+
+.cortando::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0.35em;
+    height: 2px;
+    width: 0%;
+    background: black;
+    animation: riscando 5s infinite alternate ease;
+}
+
+@keyframes riscando {
+    from { width: 0%; }
+    to { width: 100%; }
+} */
