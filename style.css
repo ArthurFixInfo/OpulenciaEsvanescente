@@ -316,11 +316,9 @@ h2:hover {
 
 @keyframes brilhop {
     0% {
-        scale: 1;
         text-shadow: 0px 0px 10px #229104;
     }
     100% {
-        scale: 1.01;
         text-shadow: 0px 0px 15px #FFE55C;
     }
 }
@@ -576,4 +574,5 @@ figure:hover{
     to { width: 100%; }
 
 } */
+
 
